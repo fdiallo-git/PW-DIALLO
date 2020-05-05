@@ -5,6 +5,7 @@
  */
 package it.tss.pw.users;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -12,7 +13,7 @@ import java.util.Objects;
  *
  * @author Fatimatou Diallo
  */
-public class User {
+public class User implements Serializable{
 
     private Long id;
     private String firstName;
