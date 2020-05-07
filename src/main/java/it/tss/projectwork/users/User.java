@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.tss.pw.users;
+package it.tss.projectwork.users;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 /**
@@ -22,7 +23,7 @@ public class User implements Serializable{
     private LocalDate birthDate;
 
     User(long l, String verdi, String rossipwd) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     public Long getId() {
@@ -92,7 +93,11 @@ public class User implements Serializable{
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", usr=" + usr + ", birthDate=" + birthDate + '}';
+        String pwd = null;
+       
+        return "User{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", usr=" + usr + ", pwd=" + pwd + ", birthDate=" + 
+                birthDate == null ? "": birthDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + '}';
+
     }
 
 }

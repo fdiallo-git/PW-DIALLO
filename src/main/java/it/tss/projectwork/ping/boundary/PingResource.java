@@ -1,4 +1,4 @@
-package it.tss.pw.users.ping.boundary;
+package it.tss.projectwork.ping.boundary;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
