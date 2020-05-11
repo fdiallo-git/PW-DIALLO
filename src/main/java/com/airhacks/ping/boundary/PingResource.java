@@ -1,4 +1,4 @@
-package it.tss.projectwork.ping.boundary;
+package com.airhacks.ping.boundary;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -18,7 +18,7 @@ public class PingResource {
 
     @GET
     public String ping() {
-        return this.message + " Jakarta EE 8 with MicroProfile 3+!";
+        return this.message + " Jakarta EE with MicroProfile 2+!";
     }
 
 }

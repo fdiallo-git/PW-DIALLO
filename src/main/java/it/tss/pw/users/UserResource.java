@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.tss.projectwork.users;
+package it.tss.pw.users;
 
 import java.util.Collection;
 import javax.inject.Inject;
@@ -11,7 +11,6 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -19,13 +18,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Fatimatou Diallo
  */
-@Path("/users")
-
-public class UsersResource {
-
-    public UsersResource() {
-    }
-    
+public class UserResource {
 
     @Inject
     UserStore store;
@@ -44,6 +37,19 @@ public class UsersResource {
         return saved;
     }
 
-   
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.APPLICATION_JSON)
+    public User create(
+            @FormParam("firstName") String fname,
+            @FormParam("lastName") String lname,
+            @FormParam("usr") String usr,
+            @FormParam("pwd") String pwd) {
+        User user = new User(null, usr, pwd);
+        user.setFirstName(fname);
+        user.setLastName(lname);
+        User saved = store.create(user);
+        return saved;
+    }
 
 }

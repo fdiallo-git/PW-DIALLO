@@ -1,5 +1,5 @@
-it\tss\projectwork\users\JAXRSConfiguration.class
-it\tss\projectwork\users\User.class
-it\tss\projectwork\ping\boundary\PingResource.class
-it\tss\projectwork\users\UserStore.class
-it\tss\projectwork\users\UsersResource.class
+com\airhacks\ping\boundary\PingResource.class
+it\tss\pw\users\JAXRSConfiguration.class
+it\tss\pw\users\UserResource.class
+it\tss\pw\users\User.class
+it\tss\pw\users\UserStore.class

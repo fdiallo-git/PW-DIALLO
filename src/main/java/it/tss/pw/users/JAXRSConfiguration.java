@@ -1,4 +1,4 @@
-package it.tss.projectwork;
+package it.tss.pw.users;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

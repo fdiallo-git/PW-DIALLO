@@ -1,2 +1,2 @@
 FROM airhacks/glassfish
-COPY ./target/Users.war ${DEPLOYMENT_DIR}
+COPY ./target/pw-diallo.war ${DEPLOYMENT_DIR}
