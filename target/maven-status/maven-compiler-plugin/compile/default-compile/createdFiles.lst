@@ -1,5 +1,11 @@
+it\tss\pw\UserAlreadyExistExceptionMapper.class
+it\tss\pw\AbstractEntity.class
+it\tss\pw\users\UsersResource.class
+it\tss\pw\users\UserAlreadyExistException.class
+it\tss\pw\users\DbConfigurator.class
+it\tss\pw\users\UserStore.class
+it\tss\pw\security\AuthenticationResource.class
+it\tss\pw\security\Credential.class
 com\airhacks\ping\boundary\PingResource.class
 it\tss\pw\users\JAXRSConfiguration.class
-it\tss\pw\users\UserResource.class
 it\tss\pw\users\User.class
-it\tss\pw\users\UserStore.class
