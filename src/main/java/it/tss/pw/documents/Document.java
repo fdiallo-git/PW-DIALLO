@@ -18,6 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 /**
  *
  * @author utente
@@ -35,22 +36,26 @@ public class Document extends AbstractEntity {
     public static enum Type {
         FILE, LINK
     }
-
+    @Column(name = "title")
     private String title;
 
+    @Column(name = "description")
     private String description;
 
+    @Column(name = "file")
     private String file;
 
+    @Column(name = "thumb")
     private String thumb;
 
     @JsonbTypeAdapter(DocumentTypeLinkAdapter.class)
     @Enumerated(EnumType.STRING)
+    @Column(name = "type")
     private Type type;
 
     @Column(name = "media_type")
     private String mediaType;
-
+    
     @JsonbTypeAdapter(PostLinkAdapter.class)
     @ManyToOne(optional = false)
     @JoinColumn(name = "post_id", nullable = false)
